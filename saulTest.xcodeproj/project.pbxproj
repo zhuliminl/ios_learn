@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54FE87B5DDD19ED9121A08D3 /* libPods-saulTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4057C66D0E34E2CE95DA4428 /* libPods-saulTest.a */; };
 		D80E7ACE2813C01A008B4FC9 /* UIColor_Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */; };
 		D8D8E8242812B71400EF2026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8232812B71400EF2026 /* AppDelegate.m */; };
 		D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8262812B71400EF2026 /* SceneDelegate.m */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4057C66D0E34E2CE95DA4428 /* libPods-saulTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-saulTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B10383E00DBB50020A4665 /* Pods-saulTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-saulTest.debug.xcconfig"; path = "Target Support Files/Pods-saulTest/Pods-saulTest.debug.xcconfig"; sourceTree = "<group>"; };
+		A8B2C465BC4EE69DA83EAE19 /* Pods-saulTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-saulTest.release.xcconfig"; path = "Target Support Files/Pods-saulTest/Pods-saulTest.release.xcconfig"; sourceTree = "<group>"; };
 		D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColor_Hexadecimal.h; sourceTree = "<group>"; };
 		D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColor_Hexadecimal.m; sourceTree = "<group>"; };
 		D8D8E81F2812B71400EF2026 /* saulTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saulTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +39,6 @@
 		D8D8E8342812B71600EF2026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D8E8362812B71600EF2026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D8E8372812B71600EF2026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D8D8E83E2812C73D00EF2026 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+Person.h"; path = "saulTest/NSObject+Person.h"; sourceTree = "<group>"; };
 		D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Person.m"; path = "saulTest/NSObject+Person.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FE87B5DDD19ED9121A08D3 /* libPods-saulTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D4E9457F8B0453E4C97BD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4057C66D0E34E2CE95DA4428 /* libPods-saulTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA3EC42D4B0A83833276E01B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65B10383E00DBB50020A4665 /* Pods-saulTest.debug.xcconfig */,
+				A8B2C465BC4EE69DA83EAE19 /* Pods-saulTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D8D8E8162812B71400EF2026 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +82,8 @@
 				D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */,
 				D8D8E8212812B71400EF2026 /* saulTest */,
 				D8D8E8202812B71400EF2026 /* Products */,
+				BA3EC42D4B0A83833276E01B /* Pods */,
+				28D4E9457F8B0453E4C97BD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +110,6 @@
 				D8D8E8362812B71600EF2026 /* Info.plist */,
 				D8D8E8372812B71600EF2026 /* main.m */,
 				D8D8E82E2812B71400EF2026 /* saulTest.xcdatamodeld */,
-				D8D8E83E2812C73D00EF2026 /* Person.h */,
 			);
 			path = saulTest;
 			sourceTree = "<group>";
@@ -98,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8D8E83B2812B71600EF2026 /* Build configuration list for PBXNativeTarget "saulTest" */;
 			buildPhases = (
+				05670576CD15B805DFB23AB4 /* [CP] Check Pods Manifest.lock */,
 				D8D8E81B2812B71400EF2026 /* Sources */,
 				D8D8E81C2812B71400EF2026 /* Frameworks */,
 				D8D8E81D2812B71400EF2026 /* Resources */,
+				9795F674465073A1AEEDE22E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +180,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05670576CD15B805DFB23AB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-saulTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9795F674465073A1AEEDE22E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-saulTest/Pods-saulTest-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-saulTest/Pods-saulTest-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-saulTest/Pods-saulTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8D8E81B2812B71400EF2026 /* Sources */ = {
@@ -307,6 +374,7 @@
 		};
 		D8D8E83C2812B71600EF2026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B10383E00DBB50020A4665 /* Pods-saulTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -335,6 +403,7 @@
 		};
 		D8D8E83D2812B71600EF2026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B2C465BC4EE69DA83EAE19 /* Pods-saulTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
