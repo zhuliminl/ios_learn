@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80E7ACE2813C01A008B4FC9 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */; };
 		D8D8E8242812B71400EF2026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8232812B71400EF2026 /* AppDelegate.m */; };
 		D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8262812B71400EF2026 /* SceneDelegate.m */; };
 		D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8292812B71400EF2026 /* ViewController.m */; };
@@ -15,9 +16,12 @@
 		D8D8E8322812B71600EF2026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D8E8312812B71600EF2026 /* Assets.xcassets */; };
 		D8D8E8352812B71600EF2026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D8E8332812B71600EF2026 /* LaunchScreen.storyboard */; };
 		D8D8E8382812B71600EF2026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8372812B71600EF2026 /* main.m */; };
+		D8D8E8412812CA0B00EF2026 /* NSObject+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColor_Hexadecimal.h; sourceTree = "<group>"; };
+		D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
 		D8D8E81F2812B71400EF2026 /* saulTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saulTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8E8222812B71400EF2026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8D8E8232812B71400EF2026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +35,9 @@
 		D8D8E8342812B71600EF2026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D8E8362812B71600EF2026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D8E8372812B71600EF2026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8D8E83E2812C73D00EF2026 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+Person.h"; path = "saulTest/NSObject+Person.h"; sourceTree = "<group>"; };
+		D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Person.m"; path = "saulTest/NSObject+Person.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,10 @@
 		D8D8E8162812B71400EF2026 = {
 			isa = PBXGroup;
 			children = (
+				D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */,
+				D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */,
+				D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */,
+				D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */,
 				D8D8E8212812B71400EF2026 /* saulTest */,
 				D8D8E8202812B71400EF2026 /* Products */,
 			);
@@ -75,6 +86,7 @@
 				D8D8E8362812B71600EF2026 /* Info.plist */,
 				D8D8E8372812B71600EF2026 /* main.m */,
 				D8D8E82E2812B71400EF2026 /* saulTest.xcdatamodeld */,
+				D8D8E83E2812C73D00EF2026 /* Person.h */,
 			);
 			path = saulTest;
 			sourceTree = "<group>";
@@ -153,6 +165,8 @@
 				D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */,
 				D8D8E8242812B71400EF2026 /* AppDelegate.m in Sources */,
 				D8D8E8302812B71400EF2026 /* saulTest.xcdatamodeld in Sources */,
+				D80E7ACE2813C01A008B4FC9 /* UIColor+Hexadecimal.m in Sources */,
+				D8D8E8412812CA0B00EF2026 /* NSObject+Person.m in Sources */,
 				D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +320,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saul.com.saulTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,6 +348,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.saul.com.saulTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
