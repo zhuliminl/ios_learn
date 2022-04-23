@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D80E7ACE2813C01A008B4FC9 /* UIColor+Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */; };
+		D80E7ACE2813C01A008B4FC9 /* UIColor_Hexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */; };
 		D8D8E8242812B71400EF2026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8232812B71400EF2026 /* AppDelegate.m */; };
 		D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8262812B71400EF2026 /* SceneDelegate.m */; };
 		D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8292812B71400EF2026 /* ViewController.m */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColor_Hexadecimal.h; sourceTree = "<group>"; };
-		D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hexadecimal.m"; sourceTree = "<group>"; };
+		D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColor_Hexadecimal.m; sourceTree = "<group>"; };
 		D8D8E81F2812B71400EF2026 /* saulTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saulTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D8E8222812B71400EF2026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D8D8E8232812B71400EF2026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		D8D8E8162812B71400EF2026 = {
 			isa = PBXGroup;
 			children = (
-				D80E7ACD2813C01A008B4FC9 /* UIColor+Hexadecimal.m */,
+				D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */,
 				D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */,
 				D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */,
 				D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */,
@@ -165,7 +165,7 @@
 				D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */,
 				D8D8E8242812B71400EF2026 /* AppDelegate.m in Sources */,
 				D8D8E8302812B71400EF2026 /* saulTest.xcdatamodeld in Sources */,
-				D80E7ACE2813C01A008B4FC9 /* UIColor+Hexadecimal.m in Sources */,
+				D80E7ACE2813C01A008B4FC9 /* UIColor_Hexadecimal.m in Sources */,
 				D8D8E8412812CA0B00EF2026 /* NSObject+Person.m in Sources */,
 				D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */,
 			);

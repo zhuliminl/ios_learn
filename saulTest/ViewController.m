@@ -49,6 +49,7 @@
     self.myText.text = @"xxx";
 //    self.myText.layoutMargins = UILayout
 //    self.myText.backgroundColor = UIColorFromRGB(0xff4433);
+    self.myText.backgroundColor = [UIColor colorWithHexString:@"#999999"];
     [self.view addSubview:self.myText];
     
     
