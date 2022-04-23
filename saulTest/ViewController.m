@@ -23,7 +23,7 @@
 @synthesize firstName, lastName;
 
 - (NSString *) fullName {
-  return [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
+    return [NSString stringWithFormat:@"%@ %@", [self firstName], [self lastName]];
 }
 @end
 
@@ -43,13 +43,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     Person *person = [[Person alloc] init];
-//    CGRect textFieldFrame = CGRectMake(0.0f, 0.0f, 200.0f, 31.0f);
+    //    CGRect textFieldFrame = CGRectMake(0.0f, 0.0f, 200.0f, 31.0f);
     CGRect textFieldFrame = CGRectMake(0.0f, 100.0f, 200.0f, 80.0f);
     self.myTextField = [[UITextField alloc] initWithFrame: textFieldFrame];
-//    self.myTextField.borderStyle = UITextBorderStyleRoundedRect;
+    //    self.myTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.myTextField.text = @"xxx";
-//    self.myText.layoutMargins = UILayout
-//    self.myText.backgroundColor = UIColorFromRGB(0xff4433);
+    //    self.myText.layoutMargins = UILayout
+    //    self.myText.backgroundColor = UIColorFromRGB(0xff4433);
     self.myTextField.backgroundColor = [UIColor colorWithHexString:@"#999999"];
     self.myTextField.center = self.view.center;
     [self.view addSubview:self.myTextField];
@@ -63,12 +63,14 @@
     self.myTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.myTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     self.myTextField.textAlignment = NSTextAlignmentCenter;
+    self.myTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    self.myTextField.placeholder = @"placeholder";
     
-    self.myTextField.text = @"小石头";
+//    self.myTextField.text = @"小石头";
     self.myTextField.textColor = UIColor.blueColor;
     
-//    self.myText.layoutMargins = UILayout
-//    self.myText.backgroundColor = UIColorFromRGB(0xff4433);
+    //    self.myText.layoutMargins = UILayout
+    //    self.myText.backgroundColor = UIColorFromRGB(0xff4433);
     
     self.myTextField.backgroundColor = [UIColor colorWithHexString:@"#999999"];
     self.myTextField.center = self.view.center;
@@ -94,21 +96,25 @@
     return YES;
 }
 
--(void) caculateAndDisplayTextFieldlengthWithText:(NSString *) paramsText {
+-(void)caculateAndDisplayTextFieldlengthWithText:(NSString *) paramsText {
     NSString *charcters = @"Characters";
     if([paramsText length] == 1) {
         charcters = @"Character";
     }
     
-//    self.labelCounter.text = [NSString stringWithFormat:@"%lu %@",
-//                              (unsigned long) [paramsText length],
-//                              charcters];
+    //    self.labelCounter.text = [NSString stringWithFormat:@"%lu %@",
+    //                              (unsigned long) [paramsText length],
+    //                              charcters];
     
     self.labelCounter.text = [NSString stringWithFormat:@"%lu %@",
-//                                  (unsigned long)[paramsText length],
-                                  [paramsText length],
-                                  charcters];
+                              (unsigned long)[paramsText length],
+                              charcters];
     
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
