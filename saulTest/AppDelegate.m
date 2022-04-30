@@ -6,6 +6,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BNTest1ViewController.h"
+#import "BNTest2ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -15,7 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
+    BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
+    
+    NSBundle *appBundle = [NSBundle mainBundle];
+
+//    BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
+    
+    self.window.rootViewController = hvc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+    
+    
     return YES;
 }
 
