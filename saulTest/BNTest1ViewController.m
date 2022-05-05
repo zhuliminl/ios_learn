@@ -13,6 +13,7 @@
 {
     
     BRSaulView *saulView = [[BRSaulView alloc] init];
+    [saulView setBackgroundColor:[UIColor blueColor]];
     self.view = saulView;
 }
 

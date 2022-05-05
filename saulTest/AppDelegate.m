@@ -6,8 +6,30 @@
 //
 
 #import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 #import "BNTest1ViewController.h"
 #import "BNTest2ViewController.h"
+
+#ifdef FB_SONARKIT_ENABLED
+#import <FlipperKit/FlipperClient.h>
+#import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
+#import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
+#import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
+#import <FlipperKitUserDefaultsPlugin/FKUserDefaultsPlugin.h>
+#import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
+
+static void InitializeFlipper(UIApplication *application)
+{
+  FlipperClient *client = [FlipperClient sharedClient];
+  SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
+  [client addPlugin:[[FlipperKitLayoutPlugin alloc] initWithRootNode:application
+                                                withDescriptorMapper:layoutDescriptorMapper]];
+  [client addPlugin:[[FKUserDefaultsPlugin alloc] initWithSuiteName:nil]];
+  [client addPlugin:[FlipperKitReactPlugin new]];
+  [client addPlugin:[[FlipperKitNetworkPlugin alloc] initWithNetworkAdapter:[SKIOSNetworkAdapter new]]];
+  [client start];
+}
+#endif
 
 
 @interface AppDelegate ()
@@ -18,18 +40,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    InitializeFlipper(application);
     
-    // Override point for customization after application launch.
-    BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//
+//    // Override point for customization after application launch.
+//    BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
+//
+//    NSBundle *appBundle = [NSBundle mainBundle];
+//
+////    BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
+//
+//    self.window.rootViewController = hvc;
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//
     
-    NSBundle *appBundle = [NSBundle mainBundle];
-
-//    BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
-    
-    self.window.rootViewController = hvc;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+//    UIViewController *myVc = [[UIViewController alloc] init];
+//    [self.window addSubview:myVc.view];
+//    [self.window makeKeyAndVisible];
 
     
     

@@ -91,7 +91,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initZoomOnChange];
+//    [self initZoomOnChange];
     
     
     //    BNLogger *logger = [[BNLogger alloc] init];
@@ -128,27 +128,27 @@
      self.labelCounter.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
      */
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    
-    [button addTarget:self action:@selector(highScoreButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
-    [button setTitle:@"xx" forState:UIControlStateNormal];
-    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-    [self.view addSubview:button];
-    
-    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+//
+//    [button addTarget:self action:@selector(highScoreButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+//
+//
+//
+//    [button setTitle:@"xx" forState:UIControlStateNormal];
+//    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+//    [self.view addSubview:button];
     
     
-    [self.view addSubview:self.labelCounter];
+    
+    
+//    [self.view addSubview:self.labelCounter];
     
     
 }
 
 -(void) goToSaulView
 {
-    BNTest1ViewController *vc = [[BNTest1ViewController alloc] initWithNibName:@"vc1" bundle:nil];
+    BNTest1ViewController *vc = [[BNTest1ViewController alloc] initWithNibName:@"Test1" bundle:nil];
     [self presentViewController:vc animated:YES completion:nil];
 
 //    [self performSegueWithIdentifier:"" sender:self];

@@ -7,6 +7,9 @@
 
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
+#import <UIKit/UIKit.h>
+#import "BNTest1ViewController.h"
+#import "BNTest2ViewController.h"
 
 @interface SceneDelegate ()
 
@@ -19,6 +22,32 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    /*
+        UIViewController *myVc = [[UIViewController alloc] init];
+    UIViewController *myVc2 = [[UIViewController alloc] init];
+        [self.window addSubview:myVc.view];
+    [self.window addSubview:myVc2.view];
+        [self.window makeKeyAndVisible];
+     */
+    
+        BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
+    
+        NSBundle *appBundle = [NSBundle mainBundle];
+    
+        BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
+    
+//        self.window.rootViewController = hvc;
+    self.window.rootViewController = vc2;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+    
+        
+//        UIViewController *myVc = [[UIViewController alloc] init];
+//        [self.window addSubview:myVc.view];
+//        [self.window makeKeyAndVisible];
+    
+
 }
 
 

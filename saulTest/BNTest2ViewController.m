@@ -9,6 +9,8 @@
 
 @interface BNTest2ViewController ()
 @property(nonatomic, weak) IBOutlet UIDatePicker *datePicker;
+@property(nonatomic, weak) IBOutlet UILabel *myName;
+@property(nonatomic, weak) IBOutlet UILabel *myAge;
 
 @end
 
@@ -23,6 +25,11 @@
 {
     NSDate *date = self.datePicker.date;
     NSLog(@"设定一个时间 for %@", date);
+}
+
+-(IBAction)updateMyNameToSaul:(id)sender
+{
+    self.myName.text = @"saul";
 }
 
 /*
