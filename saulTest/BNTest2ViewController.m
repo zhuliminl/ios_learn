@@ -16,6 +16,20 @@
 
 @implementation BNTest2ViewController
 
+-(id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self) {
+        self.tabBarItem.title = @"Test2";
+        UIImage *icon = [UIImage imageNamed:@"icon2.png"];
+        self.tabBarItem.image = icon;
+    }
+    
+    NSLog(@"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

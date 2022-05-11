@@ -37,8 +37,15 @@
     
         BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
     
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[hvc, vc2];
+    
 //        self.window.rootViewController = hvc;
-    self.window.rootViewController = vc2;
+    
+//    self.window.rootViewController = vc2;
+    self.window.rootViewController = tabBarController;
+    
         self.window.backgroundColor = [UIColor whiteColor];
         [self.window makeKeyAndVisible];
     
