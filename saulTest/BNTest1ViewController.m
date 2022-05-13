@@ -7,6 +7,8 @@
 
 #import "BNTest1ViewController.h"
 #import "BRSaulView.h"
+#import "MyViewController.h"
+#import "BRItemsTableViewController.h"
 
 @interface MyButton : UIButton
 - (void)setHighlighted:(BOOL)highlighted;
@@ -18,9 +20,9 @@
 {
     [super setHighlighted:highlighted];
     if (highlighted) {
-        self.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
+        self.backgroundColor = [UIColor colorWithWhite:0.4f alpha:1.0f];
     } else {
-        self.backgroundColor = [UIColor colorWithWhite:0.8f alpha:1.0f];
+        self.backgroundColor = [UIColor colorWithWhite:0.1f alpha:1.0f];
     }
 }
 
@@ -38,7 +40,7 @@
         self.tabBarItem.title = @"Test1";
         UIImage *icon = [UIImage imageNamed:@"icon1.png"];
         self.tabBarItem.image = icon;
-    
+        
     }
     
     return self;
@@ -50,29 +52,29 @@
     BRSaulView *saulView = [[BRSaulView alloc] init];
     [saulView setBackgroundColor:[UIColor whiteColor]];
     
-
+    
     CGRect textFieldFrame = CGRectMake(10, 120, 200, 30);
-//    CGRect textFieldFrame = CGRectMake(0, 0, 200, 30);
+    //    CGRect textFieldFrame = CGRectMake(0, 0, 200, 30);
     UITextField *myText = [[UITextField alloc] initWithFrame: textFieldFrame];
     myText.placeholder = @"输入密码";
     myText.returnKeyType = UIReturnKeyDone;
-//    myText.backgroundColor = [UIColor lightGrayColor];
+    //    myText.backgroundColor = [UIColor lightGrayColor];
     myText.backgroundColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
     myText.borderStyle = UITextBorderStyleRoundedRect;
     [saulView addSubview:myText];
     
     myText.delegate = self;
     
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [button addTarget:self action:@selector(navigateToTableView) forControlEvents:UIControlEventTouchUpInside];
-//    [button setTitle:@"Show view" forState:UIControlStateNormal];
-//    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-//    [button setBackgroundColor:[UIColor colorWithWhite:0.1f alpha:1.0f]];
-//
-//    button.frame =  CGRectMake(20, 140, 200, 30);
-//
-//    [saulView addSubview:button];
-
+    //    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [button addTarget:self action:@selector(navigateToTableView) forControlEvents:UIControlEventTouchUpInside];
+    //    [button setTitle:@"Show view" forState:UIControlStateNormal];
+    //    [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    //    [button setBackgroundColor:[UIColor colorWithWhite:0.1f alpha:1.0f]];
+    //
+    //    button.frame =  CGRectMake(20, 140, 200, 30);
+    //
+    //    [saulView addSubview:button];
+    
     self.view = saulView;
     
     [self addButton];
@@ -87,14 +89,25 @@
     [button setTitle:@"被点击" forState:UIControlStateHighlighted];
     [button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor colorWithWhite:0.1f alpha:1.0f]];
-
+    
     button.frame =  CGRectMake(20, 140, 200, 30);
     [self.view addSubview:button];
 }
 
 -(void) navigateToTableView
 {
+    //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"myStoryBoard" bundle:nil];
+    //    MyViewController *myVc = (MyViewController *)[storyBoard instantiateViewControllerWithIdentifier: @"myStoryBoard"];
+    //    UIViewController *myVc = [storyBoard instantiateViewControllerWithIdentifier:@"myStoryBoard"];
     
+    //    [self.navigationController pushViewController:myVc animated:YES];
+    
+    //    UIViewController *vc = [[UIViewController alloc] init];
+    BRItemsTableViewController *vc = [[BRItemsTableViewController alloc] init];
+    
+    //    vc.view =
+    [self presentViewController:vc animated:YES completion:nil];
+    NSLog(@"fuck");
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -143,9 +156,9 @@
         motionEffect.maximumRelativeValue = @100;
         [messageLabel addMotionEffect:motionEffect];
         
-//        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+        //        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
         
-
+        
     }
 }
 

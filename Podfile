@@ -7,6 +7,8 @@ install! 'cocoapods', :deterministic_uuids => false
 target 'saulTest' do
   config = use_native_modules!
 
+  pod 'MBFaker'
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 

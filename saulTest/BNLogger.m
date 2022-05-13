@@ -25,7 +25,7 @@
     NSDate *now = [NSDate date];
     self.lastTime = now;
     
-//    [self setLastTime:now];
+    //    [self setLastTime:now];
     NSLog(@"JUST set time to %@", self.lastTimeString);
     NSLog(@"JUST set ----------------> to %@", [self lastTimeString]);
     
@@ -38,7 +38,7 @@
     _incommingData = nil;
     
     NSMutableDictionary *dict=[NSJSONSerialization JSONObjectWithData:[string dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
-
+    
     
     NSLog(@"result length %lu", string.length);
     NSLog(@"result length %@", string);
