@@ -21,7 +21,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if(self) {
-        for(int i = 0;i <  5; i++) {
+        for(int i = 0;i <  50000; i++) {
             [[BRItemStore sharedStore] createItem];
         }
     }
@@ -41,6 +41,8 @@
     
     [self initData];
     
+    UIView *header = [self loadHeaderView];
+    [self.tableView setTableHeaderView:header];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -52,7 +54,14 @@
 {
     NSLog(@"----------------------------- tableview ----------------------------");
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MyCell"];
+}
+
+- (UIView *)loadHeaderView
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    [view setBackgroundColor:[UIColor greenColor]];
+    return view;
 }
 
 #pragma mark - Table view data source
@@ -70,13 +79,13 @@
     
     NSLog(@"saul tableView:callForRowAdIndexPath");
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCell" forIndexPath:indexPath];
     NSArray *items = [[BRItemStore sharedStore] allItems];
     BRItem *item = items[indexPath.row];
     
-    NSString* name  = [MBFakerName name];
+//    NSString* name  = [MBFakerName name];
     
-    cell.textLabel.text = name;
+    cell.textLabel.text = item.itemName;
     return cell;
 }
 

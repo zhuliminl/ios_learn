@@ -6,13 +6,18 @@
 //
 
 #import "BRItem.h"
+#import <MBFaker/MBFaker.h>
 
 @implementation BRItem
 
 + (id) randomItem
 {
     NSArray *nameList = @[@"saul", @"jemo", @"qingle", @"tang"];
-    BRItem *newItem = [[self alloc] initWithItemName:@"xiaos" userAge:2 userNickname:@"saul"];
+    
+    NSString *randomName = [MBFakerName name];
+    NSString *randomName2 = [MBFakerName name];
+    
+    BRItem *newItem = [[self alloc] initWithItemName:randomName userAge:2 userNickname:[NSString stringWithFormat:@"nickname_%@", randomName2]];
     return newItem;
 }
 
