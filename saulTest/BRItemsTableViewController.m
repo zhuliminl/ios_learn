@@ -23,8 +23,8 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if(self) {
-        for(int i = 0;i <  50; i++) {
-            [[BRItemStore sharedStore] createItem];
+        for(int i = 0;i < 1; i++) {
+//            [[BRItemStore sharedStore] createItem];
         }
     }
     
@@ -63,6 +63,18 @@
     }
 }
 
+
+-(IBAction)addItem:(id)sender
+{
+    BRItem *newItem = [[BRItemStore sharedStore] createItem];
+    NSInteger lastRow = [[[BRItemStore sharedStore] allItems] indexOfObject:newItem];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection: 0];
+    
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+
 -(void) initData
 {
     NSLog(@"----------------------------- tableview ----------------------------");
@@ -86,7 +98,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 
