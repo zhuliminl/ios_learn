@@ -26,6 +26,8 @@
 		D8E44718282E2B5B00842AED /* BRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E44717282E2B5B00842AED /* BRItemStore.m */; };
 		D8E4471B282E2D3000842AED /* BRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4471A282E2D3000842AED /* BRItem.m */; };
 		D8E4471D2830F05A00842AED /* header.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E4471C2830F05A00842AED /* header.xib */; };
+		D8E4472128322A2200842AED /* BRVc1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4471F28322A2200842AED /* BRVc1ViewController.m */; };
+		D8E4472228322A2200842AED /* BRVc1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E4472028322A2200842AED /* BRVc1ViewController.xib */; };
 		D8FAF396281BB4D400DBB0DE /* BNLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF395281BB4D300DBB0DE /* BNLogger.m */; };
 		D8FAF399281CFA5300DBB0DE /* BNTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF398281CFA5200DBB0DE /* BNTest1ViewController.m */; };
 		D8FAF39C281CFCC200DBB0DE /* BRSaulView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF39B281CFCC200DBB0DE /* BRSaulView.m */; };
@@ -67,6 +69,9 @@
 		D8E44719282E2D3000842AED /* BRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRItem.h; sourceTree = "<group>"; };
 		D8E4471A282E2D3000842AED /* BRItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRItem.m; sourceTree = "<group>"; };
 		D8E4471C2830F05A00842AED /* header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = header.xib; sourceTree = "<group>"; };
+		D8E4471E28322A2200842AED /* BRVc1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRVc1ViewController.h; sourceTree = "<group>"; };
+		D8E4471F28322A2200842AED /* BRVc1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRVc1ViewController.m; sourceTree = "<group>"; };
+		D8E4472028322A2200842AED /* BRVc1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BRVc1ViewController.xib; sourceTree = "<group>"; };
 		D8FAF394281BB4D300DBB0DE /* BNLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNLogger.h; sourceTree = "<group>"; };
 		D8FAF395281BB4D300DBB0DE /* BNLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNLogger.m; sourceTree = "<group>"; };
 		D8FAF397281CFA5200DBB0DE /* BNTest1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTest1ViewController.h; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				D8E44719282E2D3000842AED /* BRItem.h */,
 				D8E4471A282E2D3000842AED /* BRItem.m */,
 				D8E4471C2830F05A00842AED /* header.xib */,
+				D8E4471E28322A2200842AED /* BRVc1ViewController.h */,
+				D8E4471F28322A2200842AED /* BRVc1ViewController.m */,
+				D8E4472028322A2200842AED /* BRVc1ViewController.xib */,
 			);
 			path = saulTest;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				D8E4471D2830F05A00842AED /* header.xib in Resources */,
 				D8D8E8322812B71600EF2026 /* Assets.xcassets in Resources */,
 				D8D8E82D2812B71400EF2026 /* Main.storyboard in Resources */,
+				D8E4472228322A2200842AED /* BRVc1ViewController.xib in Resources */,
 				D8FAF3A1281D0DD800DBB0DE /* Test1.xib in Resources */,
 				D8E44710282BE5F700842AED /* myStoryBoard.storyboard in Resources */,
 			);
@@ -306,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E4472128322A2200842AED /* BRVc1ViewController.m in Sources */,
 				D8D8E8382812B71600EF2026 /* main.m in Sources */,
 				D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */,
 				D8E44718282E2B5B00842AED /* BRItemStore.m in Sources */,

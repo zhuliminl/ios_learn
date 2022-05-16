@@ -12,6 +12,8 @@
 
 @interface BRItemsTableViewController ()
 
+@property(nonatomic, strong) IBOutlet UIView *headerView;
+
 @end
 
 @implementation BRItemsTableViewController
@@ -21,7 +23,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if(self) {
-        for(int i = 0;i <  50000; i++) {
+        for(int i = 0;i <  50; i++) {
             [[BRItemStore sharedStore] createItem];
         }
     }
@@ -50,6 +52,17 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(IBAction)toggleEditingMode:(id)sender
+{
+    if(self.isEditing) {
+        [sender setTitle:@"编辑" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"完成" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
+}
+
 -(void) initData
 {
     NSLog(@"----------------------------- tableview ----------------------------");
@@ -59,17 +72,24 @@
 
 - (UIView *)loadHeaderView
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
-    [view setBackgroundColor:[UIColor greenColor]];
-    return view;
+    
+    
+    if(!_headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"header" owner:self options:nil];
+    }
+    return _headerView;
+    //    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    //    [view setBackgroundColor:[UIColor greenColor]];
+    //    return view;
 }
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 0;
-//}
-//
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger c = [[BRItemStore sharedStore] allItems].count;
     return c;
@@ -83,10 +103,25 @@
     NSArray *items = [[BRItemStore sharedStore] allItems];
     BRItem *item = items[indexPath.row];
     
-//    NSString* name  = [MBFakerName name];
+    //    NSString* name  = [MBFakerName name];
     
     cell.textLabel.text = item.itemName;
     return cell;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    //    NSString *string =[list objectAtIndex:section];
+    NSString *string = @"表头";
+    /* Section header is in 0th index... */
+    [label setText:string];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:166/255.0 green:177/255.0 blue:186/255.0 alpha:1.0]]; //your background color...
+    return view;
 }
 
 /*
