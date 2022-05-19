@@ -16,7 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSArray *allItems;
 
 + (instancetype) sharedStore;
-- (BRItem *) createItem;
+- (BRItem *) createItem:(int) index;
+
+- (void) removeItem:(BRItem *)item;
+
+-(void) moveItemAtIndex:(NSInteger)fromIndex
+                toIndex:(NSInteger)toIndex;
+
+-(void)updateItem:(BRItem *) item;
 
 @end
 

@@ -18,6 +18,7 @@
 		D8D8E8352812B71600EF2026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D8E8332812B71600EF2026 /* LaunchScreen.storyboard */; };
 		D8D8E8382812B71600EF2026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8372812B71600EF2026 /* main.m */; };
 		D8D8E8412812CA0B00EF2026 /* NSObject+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */; };
+		D8E34B0528366352008ACC5D /* BRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E34B0428366352008ACC5D /* BRImageStore.m */; };
 		D8E4470B282BA91B00842AED /* BRItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4470A282BA91B00842AED /* BRItemsTableViewController.m */; };
 		D8E4470E282BE4A200842AED /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4470D282BE4A200842AED /* MyViewController.m */; };
 		D8E44710282BE5F700842AED /* myStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E4470F282BE5F700842AED /* myStoryBoard.storyboard */; };
@@ -28,6 +29,8 @@
 		D8E4471D2830F05A00842AED /* header.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E4471C2830F05A00842AED /* header.xib */; };
 		D8E4472128322A2200842AED /* BRVc1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4471F28322A2200842AED /* BRVc1ViewController.m */; };
 		D8E4472228322A2200842AED /* BRVc1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E4472028322A2200842AED /* BRVc1ViewController.xib */; };
+		D8E447252833CF5700842AED /* BRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E447242833CF5700842AED /* BRDetailViewController.m */; };
+		D8E447272833D6C400842AED /* BRDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E447262833D6C400842AED /* BRDetail.xib */; };
 		D8FAF396281BB4D400DBB0DE /* BNLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF395281BB4D300DBB0DE /* BNLogger.m */; };
 		D8FAF399281CFA5300DBB0DE /* BNTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF398281CFA5200DBB0DE /* BNTest1ViewController.m */; };
 		D8FAF39C281CFCC200DBB0DE /* BRSaulView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FAF39B281CFCC200DBB0DE /* BRSaulView.m */; };
@@ -56,6 +59,8 @@
 		D8D8E8372812B71600EF2026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+Person.h"; path = "saulTest/NSObject+Person.h"; sourceTree = "<group>"; };
 		D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Person.m"; path = "saulTest/NSObject+Person.m"; sourceTree = "<group>"; };
+		D8E34B0328366352008ACC5D /* BRImageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRImageStore.h; sourceTree = "<group>"; };
+		D8E34B0428366352008ACC5D /* BRImageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRImageStore.m; sourceTree = "<group>"; };
 		D8E44709282BA91B00842AED /* BRItemsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRItemsTableViewController.h; sourceTree = "<group>"; };
 		D8E4470A282BA91B00842AED /* BRItemsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRItemsTableViewController.m; sourceTree = "<group>"; };
 		D8E4470C282BE4A200842AED /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -72,6 +77,9 @@
 		D8E4471E28322A2200842AED /* BRVc1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRVc1ViewController.h; sourceTree = "<group>"; };
 		D8E4471F28322A2200842AED /* BRVc1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRVc1ViewController.m; sourceTree = "<group>"; };
 		D8E4472028322A2200842AED /* BRVc1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BRVc1ViewController.xib; sourceTree = "<group>"; };
+		D8E447232833CF5700842AED /* BRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRDetailViewController.h; sourceTree = "<group>"; };
+		D8E447242833CF5700842AED /* BRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRDetailViewController.m; sourceTree = "<group>"; };
+		D8E447262833D6C400842AED /* BRDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BRDetail.xib; sourceTree = "<group>"; };
 		D8FAF394281BB4D300DBB0DE /* BNLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNLogger.h; sourceTree = "<group>"; };
 		D8FAF395281BB4D300DBB0DE /* BNLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNLogger.m; sourceTree = "<group>"; };
 		D8FAF397281CFA5200DBB0DE /* BNTest1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNTest1ViewController.h; sourceTree = "<group>"; };
@@ -174,6 +182,11 @@
 				D8E4471E28322A2200842AED /* BRVc1ViewController.h */,
 				D8E4471F28322A2200842AED /* BRVc1ViewController.m */,
 				D8E4472028322A2200842AED /* BRVc1ViewController.xib */,
+				D8E447232833CF5700842AED /* BRDetailViewController.h */,
+				D8E447242833CF5700842AED /* BRDetailViewController.m */,
+				D8E447262833D6C400842AED /* BRDetail.xib */,
+				D8E34B0328366352008ACC5D /* BRImageStore.h */,
+				D8E34B0428366352008ACC5D /* BRImageStore.m */,
 			);
 			path = saulTest;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 				D8E44715282BE78D00842AED /* 123ViewController.xib in Resources */,
 				D8E4471D2830F05A00842AED /* header.xib in Resources */,
 				D8D8E8322812B71600EF2026 /* Assets.xcassets in Resources */,
+				D8E447272833D6C400842AED /* BRDetail.xib in Resources */,
 				D8D8E82D2812B71400EF2026 /* Main.storyboard in Resources */,
 				D8E4472228322A2200842AED /* BRVc1ViewController.xib in Resources */,
 				D8FAF3A1281D0DD800DBB0DE /* Test1.xib in Resources */,
@@ -316,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E4472128322A2200842AED /* BRVc1ViewController.m in Sources */,
+				D8E447252833CF5700842AED /* BRDetailViewController.m in Sources */,
 				D8D8E8382812B71600EF2026 /* main.m in Sources */,
 				D8D8E82A2812B71400EF2026 /* ViewController.m in Sources */,
 				D8E44718282E2B5B00842AED /* BRItemStore.m in Sources */,
@@ -329,6 +344,7 @@
 				D8E4470B282BA91B00842AED /* BRItemsTableViewController.m in Sources */,
 				D8D8E8272812B71400EF2026 /* SceneDelegate.m in Sources */,
 				D8FAF39C281CFCC200DBB0DE /* BRSaulView.m in Sources */,
+				D8E34B0528366352008ACC5D /* BRImageStore.m in Sources */,
 				D8FAF39F281D0BE400DBB0DE /* BNTest2ViewController.m in Sources */,
 				D8E4470E282BE4A200842AED /* MyViewController.m in Sources */,
 				D8E44714282BE78D00842AED /* 123ViewController.m in Sources */,

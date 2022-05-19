@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BRItem : NSObject
-+ (instancetype) randomItem;
+
++ (instancetype) randomItem:(int) index;
 
 -(instancetype ) initWithItemName:(NSString *)name
                           userAge:(int )age
@@ -19,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *itemName;
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic) int userAge;
-//@property (nonatomic, readonly, strong) NSDate *dateCreated;
+@property (nonatomic, strong) NSDate *dateCreated;
 
 @end
 

@@ -39,11 +39,45 @@
     return [self.privateItems copy];
 }
 
-- (BRItem *) createItem
+- (BRItem *) createItem:(int) index
 {
-    BRItem *newItem = [BRItem randomItem];
+    BRItem *newItem = [BRItem randomItem: index];
     [self.privateItems addObject:newItem];
     
     return newItem;
 }
+
+-(void)updateItem:(BRItem *) item
+{
+    // find item
+    // replace item
+    
+    NSString *name = @"xiaoshitou";
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K MATCHES[c] %@", @"itemName", item.itemName];
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemName beginswith[c] 's'"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"itemName == %@", item.itemName];
+    NSArray *filteredArray = [self.privateItems filteredArrayUsingPredicate:predicate];
+    
+    
+}
+
+- (void) removeItem:(BRItem *)item
+{
+    [self.privateItems removeObjectIdenticalTo: item];
+}
+
+-(void) moveItemAtIndex:(NSInteger)fromIndex
+                toIndex:(NSInteger)toIndex
+{
+    if(fromIndex == toIndex) {
+        return;
+    }
+    
+    BRItem *item = self.privateItems[fromIndex];
+    
+    [self.privateItems removeObjectAtIndex:fromIndex];
+    [self.privateItems insertObject:item atIndex:toIndex];
+    
+}
+
 @end

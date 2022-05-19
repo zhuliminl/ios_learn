@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "BNTest1ViewController.h"
 #import "BNTest2ViewController.h"
+#import "BRItemsTableViewController.h"
 
 @interface SceneDelegate ()
 
@@ -24,37 +25,64 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     /*
-        UIViewController *myVc = [[UIViewController alloc] init];
-    UIViewController *myVc2 = [[UIViewController alloc] init];
-        [self.window addSubview:myVc.view];
-    [self.window addSubview:myVc2.view];
-        [self.window makeKeyAndVisible];
+     UIViewController *myVc = [[UIViewController alloc] init];
+     UIViewController *myVc2 = [[UIViewController alloc] init];
+     [self.window addSubview:myVc.view];
+     [self.window addSubview:myVc2.view];
+     [self.window makeKeyAndVisible];
      */
     
-        BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
-    
-        NSBundle *appBundle = [NSBundle mainBundle];
-    
-        BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
     
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, vc2];
     
-//        self.window.rootViewController = hvc;
     
-//    self.window.rootViewController = vc2;
-    self.window.rootViewController = tabBarController;
     
+    
+    /*
+     BNTest1ViewController *hvc = [[BNTest1ViewController alloc] init];
+     
+     NSBundle *appBundle = [NSBundle mainBundle];
+     
+     BNTest2ViewController *vc2 = [[BNTest2ViewController alloc] initWithNibName:@"Test1" bundle:appBundle];
+     
+     
+     UITabBarController *tabBarController = [[UITabBarController alloc] init];
+     tabBarController.viewControllers = @[hvc, vc2];
+     
+     //        self.window.rootViewController = hvc;
+     
+     //    self.window.rootViewController = vc2;
+     self.window.rootViewController = tabBarController;
+     
+     self.window.backgroundColor = [UIColor whiteColor];
+     [self.window makeKeyAndVisible];
+     */
+    
+    
+    
+    
+    
+    BRItemsTableViewController *tableVc = [[BRItemsTableViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableVc];
+    self.window.rootViewController = navController;
         self.window.backgroundColor = [UIColor whiteColor];
-        [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
     
-        
-//        UIViewController *myVc = [[UIViewController alloc] init];
-//        [self.window addSubview:myVc.view];
-//        [self.window makeKeyAndVisible];
     
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //        UIViewController *myVc = [[UIViewController alloc] init];
+    //        [self.window addSubview:myVc.view];
+    //        [self.window makeKeyAndVisible];
+    
+    
 }
 
 
@@ -88,7 +116,7 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
-
+    
     // Save changes in the application's managed object context when the application transitions to the background.
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }

@@ -10,12 +10,16 @@
 
 @implementation BRItem
 
-+ (id) randomItem
++ (id) randomItem:(int)index
 {
     NSArray *nameList = @[@"saul", @"jemo", @"qingle", @"tang"];
-    
+
     NSString *randomName = [MBFakerName name];
     NSString *randomName2 = [MBFakerName name];
+    
+    if(index == 2) {
+        randomName = @"saul";
+    }
     
     BRItem *newItem = [[self alloc] initWithItemName:randomName userAge:2 userNickname:[NSString stringWithFormat:@"nickname_%@", randomName2]];
     return newItem;
@@ -30,6 +34,7 @@
         self.itemName = name;
         self.userAge = age;
         self.nickname = nickname;
+        self.dateCreated = [[NSDate alloc] init];
     }
     return self;
 }

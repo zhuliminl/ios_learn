@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="datePicker" destination="cXT-DE-KDS" id="ZB7-7n-3kh"/>
                 <outlet property="myName" destination="mTR-JF-sNf" id="7p0-UZ-s01"/>
-                <outlet property="view" destination="ab7-Me-VKk" id="coK-mm-KJG"/>
+                <outlet property="view" destination="ab7-Me-VKk" id="SYY-gZ-3ab"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -9,6 +9,7 @@
 #import "BRItemStore.h"
 #import "BRItem.h"
 #import <MBFaker/MBFaker.h>
+#import "BRDetailViewController.h"
 
 @interface BRItemsTableViewController ()
 
@@ -22,18 +23,45 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     
+//    [self test];
+    
     if(self) {
-        for(int i = 0;i < 1; i++) {
-//            [[BRItemStore sharedStore] createItem];
+        for(int i = 0;i < 4; i++) {
+            [[BRItemStore sharedStore] createItem:i];
         }
     }
     
     return self;
 }
 
+-(void) test
+{
+    NSArray *array = @[@12, @13,@89, @90, @1, @779, @3];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF > 10 AND SELF < 90"];
+    NSArray *res = [array filteredArrayUsingPredicate:predicate];
+    NSArray *foo = @[@1];
+    
+}
+
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [super init];
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    NSLog(@"TableView--------- 视图出现");
+    [self.tableView reloadData];
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    NSLog(@"TableView--------- 消失");
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    NSLog(@"TableView--------- DidAppear");
 }
 
 
@@ -66,12 +94,52 @@
 
 -(IBAction)addItem:(id)sender
 {
-    BRItem *newItem = [[BRItemStore sharedStore] createItem];
+    BRItem *newItem = [[BRItemStore sharedStore] createItem:199];
     NSInteger lastRow = [[[BRItemStore sharedStore] allItems] indexOfObject:newItem];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection: 0];
     
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //    BRDetailViewController *detailVc = [[BRDetailViewController alloc] init];
+    BRDetailViewController *detailVc = [[BRDetailViewController alloc] initWithNibName:@"BRDetail" bundle:nil];
+    
+    NSArray *items = [[BRItemStore sharedStore] allItems];
+    BRItem *selectedItem = items[indexPath.row];
+    detailVc.item = selectedItem;
+    
+    [self.navigationController pushViewController:detailVc animated:YES];
+    
+}
+
+// 删除模式
+- (void)   tableView:(UITableView *)tableView
+  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+   forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items = [[BRItemStore sharedStore] allItems];
+        BRItem *item = items[indexPath.row];
+        [[BRItemStore sharedStore] removeItem:item];
+        
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    
+}
+
+// 移动
+- (void)   tableView:(UITableView *)tableView
+  moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+         toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    
+    [[BRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
 
