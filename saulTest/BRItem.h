@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int userAge;
 @property (nonatomic, strong) NSDate *dateCreated;
 
+@property(nonatomic, strong) NSString *itemId;
+
 @end
 
 NS_ASSUME_NONNULL_END

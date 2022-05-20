@@ -8,6 +8,7 @@
 #import "BRDetailViewController.h"
 #import "BRItem.h"
 #import "BRItemStore.h"
+#import "BRImageStore.h"
 
 
 @interface BRDetailViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -50,6 +51,9 @@
     
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     self.imageView.image = image;
+    
+    [[BRImageStore sharedStore] setImage:image forKey:self.item.itemId];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -76,6 +80,8 @@
     }
     
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    
+    self.imageView.image = [[BRImageStore sharedStore] imageForKey:item.itemId];
     
     self.itemNameText.delegate = self;
 

@@ -19,6 +19,7 @@
 		D8D8E8382812B71600EF2026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8372812B71600EF2026 /* main.m */; };
 		D8D8E8412812CA0B00EF2026 /* NSObject+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */; };
 		D8E34B0528366352008ACC5D /* BRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E34B0428366352008ACC5D /* BRImageStore.m */; };
+		D8E34B0928376C12008ACC5D /* BRLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E34B0828376C12008ACC5D /* BRLine.m */; };
 		D8E4470B282BA91B00842AED /* BRItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4470A282BA91B00842AED /* BRItemsTableViewController.m */; };
 		D8E4470E282BE4A200842AED /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E4470D282BE4A200842AED /* MyViewController.m */; };
 		D8E44710282BE5F700842AED /* myStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E4470F282BE5F700842AED /* myStoryBoard.storyboard */; };
@@ -57,10 +58,12 @@
 		D8D8E8342812B71600EF2026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D8E8362812B71600EF2026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D8E8372812B71600EF2026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+Person.h"; path = "saulTest/NSObject+Person.h"; sourceTree = "<group>"; };
-		D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Person.m"; path = "saulTest/NSObject+Person.m"; sourceTree = "<group>"; };
+		D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Person.h"; sourceTree = "<group>"; };
+		D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Person.m"; sourceTree = "<group>"; };
 		D8E34B0328366352008ACC5D /* BRImageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRImageStore.h; sourceTree = "<group>"; };
 		D8E34B0428366352008ACC5D /* BRImageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRImageStore.m; sourceTree = "<group>"; };
+		D8E34B0728376C12008ACC5D /* BRLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRLine.h; sourceTree = "<group>"; };
+		D8E34B0828376C12008ACC5D /* BRLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRLine.m; sourceTree = "<group>"; };
 		D8E44709282BA91B00842AED /* BRItemsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRItemsTableViewController.h; sourceTree = "<group>"; };
 		D8E4470A282BA91B00842AED /* BRItemsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRItemsTableViewController.m; sourceTree = "<group>"; };
 		D8E4470C282BE4A200842AED /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
@@ -123,13 +126,7 @@
 		D8D8E8162812B71400EF2026 = {
 			isa = PBXGroup;
 			children = (
-				D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */,
-				D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */,
-				D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */,
-				D8E44711282BE78D00842AED /* 123ViewController.h */,
-				D8E44712282BE78D00842AED /* 123ViewController.m */,
-				D8E44713282BE78D00842AED /* 123ViewController.xib */,
-				D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */,
+				D8E34B0A28376C20008ACC5D /* before */,
 				D8D8E8212812B71400EF2026 /* saulTest */,
 				D8D8E8202812B71400EF2026 /* Products */,
 				BA3EC42D4B0A83833276E01B /* Pods */,
@@ -148,6 +145,7 @@
 		D8D8E8212812B71400EF2026 /* saulTest */ = {
 			isa = PBXGroup;
 			children = (
+				D8E34B0628376BD9008ACC5D /* Draw */,
 				D8D8E8222812B71400EF2026 /* AppDelegate.h */,
 				D8D8E8232812B71400EF2026 /* AppDelegate.m */,
 				D8D8E8252812B71400EF2026 /* SceneDelegate.h */,
@@ -189,6 +187,29 @@
 				D8E34B0428366352008ACC5D /* BRImageStore.m */,
 			);
 			path = saulTest;
+			sourceTree = "<group>";
+		};
+		D8E34B0628376BD9008ACC5D /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				D8E34B0728376C12008ACC5D /* BRLine.h */,
+				D8E34B0828376C12008ACC5D /* BRLine.m */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		D8E34B0A28376C20008ACC5D /* before */ = {
+			isa = PBXGroup;
+			children = (
+				D8D8E8402812CA0B00EF2026 /* NSObject+Person.m */,
+				D80E7ACD2813C01A008B4FC9 /* UIColor_Hexadecimal.m */,
+				D80E7ACC2813BF37008B4FC9 /* UIColor_Hexadecimal.h */,
+				D8D8E83F2812CA0B00EF2026 /* NSObject+Person.h */,
+				D8E44711282BE78D00842AED /* 123ViewController.h */,
+				D8E44712282BE78D00842AED /* 123ViewController.m */,
+				D8E44713282BE78D00842AED /* 123ViewController.xib */,
+			);
+			path = before;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +369,7 @@
 				D8FAF39F281D0BE400DBB0DE /* BNTest2ViewController.m in Sources */,
 				D8E4470E282BE4A200842AED /* MyViewController.m in Sources */,
 				D8E44714282BE78D00842AED /* 123ViewController.m in Sources */,
+				D8E34B0928376C12008ACC5D /* BRLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,6 +35,9 @@
         self.userAge = age;
         self.nickname = nickname;
         self.dateCreated = [[NSDate alloc] init];
+        
+        NSUUID *uuid = [[NSUUID alloc] init];
+        self.itemId = [uuid UUIDString];
     }
     return self;
 }
