@@ -11,6 +11,7 @@
 #import "BNTest1ViewController.h"
 #import "BNTest2ViewController.h"
 #import "BRItemsTableViewController.h"
+#import "./Draw/BNRDrawViewController.h"
 
 @interface SceneDelegate ()
 
@@ -62,12 +63,18 @@
     
     
     
+    /* table 的显示
     BRItemsTableViewController *tableVc = [[BRItemsTableViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableVc];
     self.window.rootViewController = navController;
         self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+     */
     
+    BNRDrawViewController *drawVc = [[BNRDrawViewController alloc] init];
+    self.window.rootViewController = drawVc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     
     
