@@ -6,10 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BNRDrawView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BNRDrawViewController : UIViewController
+@property(nonatomic, strong) BNRDrawView *view;
 
 @end
 

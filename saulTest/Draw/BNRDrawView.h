@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BNRDrawView : UIView
 
+-(void) clearScreen;
 @end
 
 NS_ASSUME_NONNULL_END
