@@ -37,7 +37,7 @@
 -(void) buttonPressd
 {
     [self.view clearScreen];
-    
+
 }
 
 /*

@@ -33,7 +33,7 @@
 -(void)strokeLine:(BRLine *) line
 {
     UIBezierPath *bp = [UIBezierPath bezierPath];
-    bp.lineWidth = 10;
+    bp.lineWidth = 1;
     bp.lineCapStyle = kCGLineCapRound;
     [bp moveToPoint:line.begin];
     [bp addLineToPoint:line.end];
@@ -101,7 +101,9 @@
 -(void) clearScreen
 {
     self.currentLine = nil;
-    self.finishedLines = nil;
+//    self.finishedLines = nil;
+//    self.finishedLines = [[NSMutableArray alloc] init];
+    [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
 }
 
